@@ -50,6 +50,13 @@ namespace Primeiro
                 return area;
             }
 
+            public override string ToString()
+            {
+                return "Lado A:"   + A.ToString("F4", CultureInfo.InvariantCulture) +
+                       " Lado B: " + B.ToString("F4", CultureInfo.InvariantCulture) + 
+                       " Lado C: " + C.ToString("F4", CultureInfo.InvariantCulture) + 
+                       " Area: " + CalcularArea().ToString("F4", CultureInfo.InvariantCulture);
+            }
         }
     }
 }

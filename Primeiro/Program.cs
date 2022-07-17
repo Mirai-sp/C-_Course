@@ -60,6 +60,8 @@ namespace Primeiro
             trianguloB.SetC(4.02);
 
             Console.WriteLine("As areas dos triangulos são: {0} e {1}", trianguloA.CalcularArea().ToString("F4", CultureInfo.InvariantCulture), trianguloB.CalcularArea().ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("Triangulo A: " + trianguloA.ToString());
+            Console.WriteLine("Triangulo B: " + trianguloB.ToString());
 
 
         }
