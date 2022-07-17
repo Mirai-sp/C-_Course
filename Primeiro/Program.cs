@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using Primeiro.Capitulo2;
+
 
 namespace Primeiro
 {
@@ -7,42 +9,59 @@ namespace Primeiro
     {
         static void Main(string[] args)
         {
-            int idade = 32;
-            double saldo = 10.35784;
-            string nome = "Maria";
-            bool success = false;
-
-            // Metodo Placeholder
-            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} reais", nome, idade, saldo);
-            
-            // Metodo de interpolação
-            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");
-
-            // Metodo via concatenação
-            Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2") + " reais");
-
-            // Para nao aplicar regionalizacao no ponto decimal e usar ponto ao invez de virgula
-            Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2", CultureInfo.InvariantCulture) + " reais");
-
-            // tomar cuidado com divisoes, se for numero inteiro a divisao sera inteira
-            double resultado = 10f / 2f;
-            Console.WriteLine(resultado);
-
-            // Fazer conversao de dado
-            while (!success)
+            int runOpt = -1;
+            int maxOpt = 2;
+            Console.WriteLine("O que deseja rodar:");
+            while (runOpt == -1)
             {
+                Console.WriteLine("1. Exemplo Capitulo 1");
+                Console.WriteLine("2. Exemplo Capitulo 1");
+                Console.Write("Digite a opção desejada: ");
+                
                 try
                 {
-                    Console.WriteLine("Digite um número");
-                    int n1 = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Você digitou {0}", n1);
-                    success = true;
-                }
-                catch
+                    runOpt = int.Parse(Console.ReadLine());
+                    if (!(runOpt >= 1 && runOpt <= maxOpt))
+                        throw new Exception("Escolha um numero válido");
+
+                    switch (runOpt)
+                    {
+                        case 1:
+                            RodarExemplo1();
+                            break;
+                        case 2:
+                            RodarExemplo2();
+                            break;
+                    }
+                } catch (Exception e)
                 {
-                    Console.WriteLine("O número digitado é inválido, tente novamente");
-                }
+                    runOpt = -1;                    
+                    Console.WriteLine("Digite uma opção válida, escolha entre 1 e {0}", maxOpt);
+                }                
             }
+        }
+
+        public static void RodarExemplo1()
+        {
+            Exemplo exemplo = new Exemplo();
+            exemplo.Rodar();
+        }
+
+        public static void RodarExemplo2()
+        {
+            Triangulo trianguloA = new Triangulo();
+            trianguloA.SetA(3);
+            trianguloA.SetB(4);
+            trianguloA.SetC(5);
+
+            Triangulo trianguloB = new Triangulo();
+            trianguloB.SetA(7.50);
+            trianguloB.SetB(4.50);
+            trianguloB.SetC(4.02);
+
+            Console.WriteLine("As areas dos triangulos são: {0} e {1}", trianguloA.CalcularArea().ToString("F4", CultureInfo.InvariantCulture), trianguloB.CalcularArea().ToString("F4", CultureInfo.InvariantCulture));
+
+
         }
     }
 }
