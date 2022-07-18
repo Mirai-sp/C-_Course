@@ -27,7 +27,7 @@ namespace Primeiro.Capitulo2
             // tomar cuidado com divisoes, se for numero inteiro a divisao sera inteira
             double resultado = 10f / 2f;
             Console.WriteLine(resultado);
-
+            
             // Fazer conversao de dado
             while (!success)
             {

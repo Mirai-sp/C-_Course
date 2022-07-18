@@ -3,6 +3,7 @@ using System.Globalization;
 using Primeiro.Capitulo2;
 using Primeiro.Capitulo3;
 using Primeiro.Capitulo5;
+using Primeiro.Capitulo6;
 
 
 namespace Primeiro
@@ -12,7 +13,7 @@ namespace Primeiro
         static void Main(string[] args)
         {
             int runOpt = -1;
-            const int maxOpt = 3;
+            const int maxOpt = 5;
             const int endOpt = maxOpt + 1;
             Console.WriteLine("O que deseja rodar:");
             while (runOpt == -1)
@@ -20,6 +21,8 @@ namespace Primeiro
                 Console.WriteLine("1. Exemplo Capitulo 1 - Teste para conhecimento");
                 Console.WriteLine("2. Exemplo Capitulo 3 - Triangulo");
                 Console.WriteLine("3. Exemplo Capitulo 5 - Conta Bancária");
+                Console.WriteLine("4. Exemplo Capitulo 6 - Manipulação de strings");
+                Console.WriteLine("5. Exemplo Capitulo 6 - DateTime e TimeSpan");
                 Console.WriteLine(endOpt + ". Encerrar");
                 Console.Write("Digite a opção desejada: ");
 
@@ -43,6 +46,16 @@ namespace Primeiro
                             break;
                         case 3:
                             RodarExemplo3();
+                            runOpt = -1;
+                            Console.WriteLine();
+                            break;
+                        case 4:
+                            RodarExemplo4();
+                            runOpt = -1;
+                            Console.WriteLine();
+                            break;
+                        case 5:
+                            RodarExemplo5();
                             runOpt = -1;
                             Console.WriteLine();
                             break;
@@ -224,6 +237,18 @@ namespace Primeiro
                 rodar = char.Parse(Console.ReadLine().ToString().ToLower()) == 's';
             }
             Console.WriteLine("Good Bye!...");
+        }
+
+        public static void RodarExemplo4()
+        {
+            StringTest stringTestObj = new StringTest();
+            stringTestObj.Rodar();
+        }
+
+        public static void RodarExemplo5()
+        {
+            DateTimeAndTimeSpan dateTimeAndTimeSpantObj = new DateTimeAndTimeSpan();
+            dateTimeAndTimeSpantObj.Rodar();
         }
     }
 }
