@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Primeiro.Capitulo6
 {
     class StringTest
     {
-        public void Rodar()
+        public static void Rodar()
         {
             string original = "abcde FGHIJ ABC abc DEFG ";
             string s1 = original.ToUpper();

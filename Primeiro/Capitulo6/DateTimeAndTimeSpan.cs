@@ -7,7 +7,7 @@ namespace Primeiro.Capitulo6
 {
     class DateTimeAndTimeSpan
     {
-        public void Rodar()
+        public static void Rodar()
         {
             // construtores
             {

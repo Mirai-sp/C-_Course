@@ -5,7 +5,7 @@ namespace Primeiro.Capitulo2
 {
     public class Exemplo
     {
-        public void Rodar()
+        public static void Rodar()
         {
             int idade = 32;
             double saldo = 10.35784;
