@@ -10,6 +10,7 @@ using Primeiro.Capitulo9.DesafioPedido.Controller;
 using Primeiro.Capitulo10.ExemploHeranca.Controller;
 using Primeiro.Capitulo10.ExemploPolimorfismo.Controller;
 using Primeiro.Capitulo10.DesafioPolimorfismo.Controller;
+using Primeiro.Capitulo10.DesafioClasseAbstrata.Controller;
 
 
 namespace Primeiro
@@ -27,7 +28,7 @@ namespace Primeiro
 
 
             int runOpt = -1;
-            const int maxOpt = 12;
+            const int maxOpt = 13;
             const int endOpt = maxOpt + 1;
             Console.WriteLine("O que deseja rodar:");
             while (runOpt == -1)
@@ -44,6 +45,7 @@ namespace Primeiro
                 Console.WriteLine("10. Exemplo Capitulo 10 - Exemplo de herança");
                 Console.WriteLine("11. Exemplo Capitulo 10 - Exemplo de polimorfismo");
                 Console.WriteLine("12. Exemplo Capitulo 10 - Desafio de polimorfismo");
+                Console.WriteLine("13. Exemplo Capitulo 10 - Desafio de classe abstrata");
                 Console.WriteLine(endOpt + ". Encerrar");
                 Console.Write("Digite a opção desejada: ");
 
@@ -90,6 +92,9 @@ namespace Primeiro
                             break;
                         case 12:
                             EfetuarEscolha(ref runOpt, DesafioPolimorfismoController.Rodar);
+                            break;
+                        case 13:
+                            EfetuarEscolha(ref runOpt, DesafioClasseAbstrataController.Rodar);
                             break;
                         case endOpt:
                             Console.WriteLine();
