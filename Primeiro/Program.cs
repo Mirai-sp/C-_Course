@@ -4,6 +4,10 @@ using Primeiro.Capitulo2;
 using Primeiro.Capitulo3;
 using Primeiro.Capitulo5;
 using Primeiro.Capitulo6;
+using Primeiro.Capitulo9.ExemploEnums.Entities;
+using Primeiro.Capitulo9.ExemploEnums.Enums;
+using Primeiro.Capitulo9.ExemploContratos.Entities;
+using Primeiro.Capitulo9.ExemploContratos.Enums;
 
 
 namespace Primeiro
@@ -13,7 +17,7 @@ namespace Primeiro
         static void Main(string[] args)
         {
             int runOpt = -1;
-            const int maxOpt = 5;
+            const int maxOpt = 7;
             const int endOpt = maxOpt + 1;
             Console.WriteLine("O que deseja rodar:");
             while (runOpt == -1)
@@ -23,6 +27,8 @@ namespace Primeiro
                 Console.WriteLine("3. Exemplo Capitulo 5 - Conta Bancária");
                 Console.WriteLine("4. Exemplo Capitulo 6 - Manipulação de strings");
                 Console.WriteLine("5. Exemplo Capitulo 6 - DateTime e TimeSpan");
+                Console.WriteLine("6. Exemplo Capitulo 9 - Exemplo de Enums");
+                Console.WriteLine("7. Exemplo Capitulo 9 - Exemplo de Contratos");
                 Console.WriteLine(endOpt + ". Encerrar");
                 Console.Write("Digite a opção desejada: ");
 
@@ -56,6 +62,16 @@ namespace Primeiro
                             break;
                         case 5:
                             RodarExemplo5();
+                            runOpt = -1;
+                            Console.WriteLine();
+                            break;
+                        case 6:
+                            RodarExemplo6();
+                            runOpt = -1;
+                            Console.WriteLine();
+                            break;
+                        case 7:
+                            RodarExemplo7();
                             runOpt = -1;
                             Console.WriteLine();
                             break;
@@ -249,6 +265,76 @@ namespace Primeiro
         {
             DateTimeAndTimeSpan dateTimeAndTimeSpantObj = new DateTimeAndTimeSpan();
             dateTimeAndTimeSpantObj.Rodar();
+        }
+
+        public static void RodarExemplo6()
+        {
+            Order order = new Order { 
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+
+            Console.WriteLine(order);
+
+            // converter enum para string
+            String txt = OrderStatus.PendingPayment.ToString();
+            Console.WriteLine(txt);
+
+            // Converter string para enumerado
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+            Console.WriteLine(os);
+        }
+
+        public static void RodarExemplo7()
+        {
+            Console.Write("Digite o nome do departamento: ");
+            string deptName = Console.ReadLine();
+
+            Console.WriteLine("Informe os dados do funcionário:");
+
+            Console.Write("Informe o nome: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Level ( Junior / MidLevel / Senior ): ");
+            WorkerLevel level = Enum.Parse<WorkerLevel>(Console.ReadLine());
+
+            Console.Write("Salário base: ");
+            double baseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Department dept = new Department(deptName);
+            Worker worker = new Worker(name, level, baseSalary, dept);
+
+            Console.Write("Quantos contratos para este trabalhador terá? ");
+            int nContratos = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= nContratos; i++ )
+            {
+                Console.WriteLine($"Entre com os dados do contrato N#{i}");
+
+                Console.Write("Data (DD/MM/YYYY): ");
+                DateTime date = DateTime.Parse(Console.ReadLine());
+
+                Console.Write("Valor por hora: ");
+                double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Console.Write("Duração (horas): ");
+                int hours = int.Parse(Console.ReadLine());
+
+                HourContract contract = new HourContract(date, valuePerHour, hours);
+                worker.AddContract(contract);
+            }
+
+            Console.WriteLine();
+            Console.Write("Entre com o mês e o ano para calcular o ganho (MM/YYYY): ");
+            string monthAndYear = Console.ReadLine();
+            int mounth = int.Parse(monthAndYear.Substring(0, 2));
+            int year = int.Parse(monthAndYear.Substring(3));
+
+            Console.WriteLine("Nome:" + worker.Name);
+            Console.WriteLine("Departamento:" + worker.Department.Name);
+            Console.WriteLine("Ganho em " + monthAndYear + " : " + worker.Income(mounth, year).ToString("F2", CultureInfo.InvariantCulture));
+
         }
     }
 }
