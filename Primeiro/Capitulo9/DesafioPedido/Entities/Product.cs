@@ -27,7 +27,7 @@ namespace Primeiro.Capitulo9.DesafioPedido.Entities
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("Name: ").AppendLine(Name).
-            Append("Price: ").AppendLine(Price.ToString("F2", CultureInfo.InvariantCulture);
+            Append("Price: ").AppendLine(Price.ToString("F2", CultureInfo.InvariantCulture));
 
             return sb.ToString();
         }

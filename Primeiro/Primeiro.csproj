@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Capitulo9\DesafioPedido\Controller\" />
     <Folder Include="Capitulo9\ExemploStringBuilder\Enums\" />
   </ItemGroup>
 

@@ -11,7 +11,7 @@ namespace Primeiro.Capitulo9.DesafioPedido.Entities
         public DateTime Momment { get; set; }
         public OrderStatus Status { get; set; }
         public Client Client{ get; set; }
-        public List<OrderItem> Items { get; set; }
+        public List<OrderItem> Items { get; set; } = new List<OrderItem>();
 
         public Order()
         {
@@ -49,7 +49,7 @@ namespace Primeiro.Capitulo9.DesafioPedido.Entities
             sb.Append("Client: ").AppendLine(Client.Name).
             Append("Date Time: ").AppendLine(Momment.ToString("dd/MM/yyyy HH:mm:ss")).
             Append("Status: ").AppendLine(Status.ToString()).
-            Append("Itens:");
+            AppendLine("Itens:");
             if (Items.Count == 0)
                 sb.AppendLine("No Itens Found.");
             else

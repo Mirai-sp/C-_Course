@@ -6,6 +6,7 @@ using Primeiro.Capitulo6;
 using Primeiro.Capitulo9.ExemploEnums.Controller;
 using Primeiro.Capitulo9.ExemploContratos.Controller;
 using Primeiro.Capitulo9.ExemploStringBuilder.Controller;
+using Primeiro.Capitulo9.DesafioPedido.Controller;
 
 
 namespace Primeiro
@@ -23,7 +24,7 @@ namespace Primeiro
 
 
             int runOpt = -1;
-            const int maxOpt = 8;
+            const int maxOpt = 9;
             const int endOpt = maxOpt + 1;
             Console.WriteLine("O que deseja rodar:");
             while (runOpt == -1)
@@ -36,6 +37,7 @@ namespace Primeiro
                 Console.WriteLine("6. Exemplo Capitulo 9 - Exemplo de Enums");
                 Console.WriteLine("7. Exemplo Capitulo 9 - Exemplo de Contratos");
                 Console.WriteLine("8. Exemplo Capitulo 9 - Exemplo de Posts");
+                Console.WriteLine("9. Exemplo Capitulo 9 - Desafio Ordem de pedido");
                 Console.WriteLine(endOpt + ". Encerrar");
                 Console.Write("Digite a opção desejada: ");
 
@@ -70,6 +72,9 @@ namespace Primeiro
                             break;
                         case 8:
                             EfetuarEscolha(ref runOpt, StringBuilderController.Rodar);
+                            break;
+                        case 9:
+                            EfetuarEscolha(ref runOpt, DesafioController.Rodar);
                             break;
                         case endOpt:
                             Console.WriteLine();
