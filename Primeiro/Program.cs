@@ -3,9 +3,9 @@ using Primeiro.Capitulo2;
 using Primeiro.Capitulo3;
 using Primeiro.Capitulo5;
 using Primeiro.Capitulo6;
-using Primeiro.Capitulo9.ExemploEnums.Service;
-using Primeiro.Capitulo9.ExemploContratos.Service;
-using Primeiro.Capitulo9.ExemploStringBuilder.Service;
+using Primeiro.Capitulo9.ExemploEnums.Controller;
+using Primeiro.Capitulo9.ExemploContratos.Controller;
+using Primeiro.Capitulo9.ExemploStringBuilder.Controller;
 
 
 namespace Primeiro
@@ -51,10 +51,10 @@ namespace Primeiro
                             EfetuarEscolha(ref runOpt, Exemplo.Rodar);
                             break;
                         case 2:
-                            EfetuarEscolha(ref runOpt, TrianguloService.Rodar);
+                            EfetuarEscolha(ref runOpt, TrianguloController.Rodar);
                             break;
                         case 3:
-                            EfetuarEscolha(ref runOpt, ContaBancariaService.Rodar);
+                            EfetuarEscolha(ref runOpt, ContaBancariaController.Rodar);
                             break;
                         case 4:
                             EfetuarEscolha(ref runOpt, StringTest.Rodar);
@@ -63,13 +63,13 @@ namespace Primeiro
                             EfetuarEscolha(ref runOpt, DateTimeAndTimeSpan.Rodar);
                             break;
                         case 6:
-                            EfetuarEscolha(ref runOpt, OrderService.Rodar);
+                            EfetuarEscolha(ref runOpt, OrderController.Rodar);
                             break;
                         case 7:
-                            EfetuarEscolha(ref runOpt, ContractService.Rodar);
+                            EfetuarEscolha(ref runOpt, ContractController.Rodar);
                             break;
                         case 8:
-                            EfetuarEscolha(ref runOpt, StringBuilderService.Rodar);
+                            EfetuarEscolha(ref runOpt, StringBuilderController.Rodar);
                             break;
                         case endOpt:
                             Console.WriteLine();

@@ -2,9 +2,9 @@
 using Primeiro.Capitulo9.ExemploEnums.Entities;
 using Primeiro.Capitulo9.ExemploEnums.Enums;
 
-namespace Primeiro.Capitulo9.ExemploEnums.Service
+namespace Primeiro.Capitulo9.ExemploEnums.Controller
 {
-    class OrderService
+    class OrderController
     {
         public static void Rodar()
         {

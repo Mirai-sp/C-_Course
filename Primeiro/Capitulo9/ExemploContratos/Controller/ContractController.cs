@@ -4,9 +4,9 @@ using Primeiro.Capitulo9.ExemploContratos.Enums;
 using System.Globalization;
 
 
-namespace Primeiro.Capitulo9.ExemploContratos.Service
+namespace Primeiro.Capitulo9.ExemploContratos.Controller
 {
-    class ContractService
+    class ContractController
     {
         public static void Rodar()
         {

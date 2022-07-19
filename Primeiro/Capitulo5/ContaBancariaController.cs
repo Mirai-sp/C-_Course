@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Primeiro.Capitulo5
 {
-    class ContaBancariaService
+    class ContaBancariaController
     {
         public static void Rodar()
         {

@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Primeiro.Capitulo3
 {
-    class TrianguloService
+    class TrianguloController
     {
         public static void Rodar()
         {

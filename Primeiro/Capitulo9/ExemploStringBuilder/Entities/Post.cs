@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Primeiro.Capitulo9.ExemploStringBuilder.Entities
 {
@@ -31,6 +32,25 @@ namespace Primeiro.Capitulo9.ExemploStringBuilder.Entities
         public void RemoveComment(Comment comment)
         {
             Comments.Remove(comment);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(Title).
+            Append(Likes).
+            Append(" Likes - ").
+            AppendLine(Moment.ToString("dd/MM/yyyy HH:mm:ss")).
+            AppendLine(Content).
+            AppendLine("Comments");
+
+            if (Comments.Count == 0)
+                sb.AppendLine("Não há comentários.");
+            else
+                foreach (Comment c in Comments)
+                    sb.AppendLine(c.Text);
+
+            return sb.ToString();
         }
     }
 }
