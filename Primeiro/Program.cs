@@ -37,7 +37,8 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Exemplo de polimorfismo", typeof(ExemploPolimorfismoController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de polimorfismo", typeof(DesafioPolimorfismoController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de classe abstrata", typeof(DesafioClasseAbstrataController).ToString()));
-            listAction.Add(new LoaderAction("Encerrar", null));            
+            listAction.Add(new LoaderAction("Limpar Console", "-1"));
+            listAction.Add(new LoaderAction("Encerrar", null));
 
             int runOpt = -1;
 
@@ -54,17 +55,26 @@ namespace Primeiro
                     runOpt = int.Parse(FunctionsHelper.getFromConsole("Digite uma opção: "));
                     if (runOpt > listAction.Count) // considerar o caso encerrar
                         throw new Exception("Escolha uma opção válida");
-                    else if (runOpt <= listAction.Count && listAction[runOpt - 1].Controller == null)
+                    else if (runOpt <= listAction.Count)
                     {
-                        Console.WriteLine();
-                        Console.WriteLine("Hell Yeahh, good bye!!");
-                    }
-                    else
-                    {                        
-                        LoadController controller = (LoadController)listAction[runOpt-1].CreateInstance();
-                        controller.Rodar();
-                        runOpt = -1;
-                        Console.WriteLine("");
+                        if (listAction[runOpt - 1].Controller == "-1")
+                        {
+                            Console.Clear();
+                            runOpt = -1;
+                        }
+                        else if (listAction[runOpt - 1].Controller == null)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Hell Yeahh, good bye!!");
+                        }
+                        else
+                        {
+                            LoadController controller = (LoadController)listAction[runOpt - 1].CreateInstance();
+                            Console.WriteLine("");
+                            controller.Rodar();
+                            runOpt = -1;
+                            Console.WriteLine("");
+                        }
                     }
                 }
                 catch
