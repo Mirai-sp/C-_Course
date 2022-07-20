@@ -2,7 +2,7 @@
 using System.Globalization;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo6
+namespace Primeiro.Capitulo7
 {
     class DateTimeAndTimeSpanController : LoadController
     {

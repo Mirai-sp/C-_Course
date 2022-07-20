@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using Primeiro.Entities;
 using Primeiro.Helpers;
 using Primeiro.Capitulo2;
 using Primeiro.Capitulo3;
 using Primeiro.Capitulo5;
-using Primeiro.Capitulo6;
+using Primeiro.Capitulo6.Exemplos.Controller;
+using Primeiro.Capitulo6.DesafioLista.Controller;
+using Primeiro.Capitulo7;
 using Primeiro.Capitulo9.ExemploEnums.Controller;
 using Primeiro.Capitulo9.ExemploContratos.Controller;
 using Primeiro.Capitulo9.ExemploStringBuilder.Controller;
@@ -27,8 +28,10 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 1 - Teste para conhecimento", typeof(ExemploController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 3 - Triangulo", typeof(TrianguloController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 5 - Conta Bancária", typeof(ContaBancariaController).ToString()));
-            listAction.Add(new LoaderAction("Exemplo Capitulo 6 - Manipulação de strings", typeof(StringTestController).ToString()));
-            listAction.Add(new LoaderAction("Exemplo Capitulo 6 - DateTime e TimeSpan", typeof(DateTimeAndTimeSpanController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 6 - Exemplo de structs", typeof(ExemplosController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 6 - Desafio de listas", typeof(DesafioListaController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 7 - Manipulação de strings", typeof(StringTestController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 7 - DateTime e TimeSpan", typeof(DateTimeAndTimeSpanController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 9 - Exemplo de Enums", typeof(OrderController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 9 - Exemplo de Contratos", typeof(ContractController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 9 - Exemplo de Posts", typeof(StringBuilderController).ToString()));
