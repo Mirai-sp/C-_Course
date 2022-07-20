@@ -69,7 +69,7 @@ namespace Primeiro
                 }
                 catch
                 {
-                    Console.WriteLine($"Digite uma opção válida, escolha entre 1 e { 0}", listAction.Count + 1);
+                    Console.WriteLine($"Digite uma opção válida, escolha entre 1 e {listAction.Count}", listAction.Count + 1);
                     Console.WriteLine("");
                     runOpt = -1;
                 }
