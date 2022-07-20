@@ -4,12 +4,13 @@ using System.Text;
 using System.Globalization;
 using Primeiro.Helpers;
 using Primeiro.Capitulo10.DesafioPolimorfismo.Entities;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo10.DesafioPolimorfismo.Controller
 {
-    class DesafioPolimorfismoController
+    class DesafioPolimorfismoController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             int numProduct = int.Parse(FunctionsHelper.getFromConsole("Enter the number of the products: "));
             List<Product> products = new List<Product>();

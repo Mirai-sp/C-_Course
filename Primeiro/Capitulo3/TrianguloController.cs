@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Globalization;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo3
 {
-    class TrianguloController
+    class TrianguloController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             Triangulo trianguloA = new Triangulo();
             trianguloA.A = 3;

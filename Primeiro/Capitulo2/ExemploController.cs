@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Globalization;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo2
 {
-    public class Exemplo
+    class ExemploController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             int idade = 32;
             double saldo = 10.35784;

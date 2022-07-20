@@ -2,13 +2,14 @@
 using Primeiro.Capitulo9.ExemploContratos.Entities;
 using Primeiro.Capitulo9.ExemploContratos.Enums;
 using System.Globalization;
+using Primeiro.Entities;
 
 
 namespace Primeiro.Capitulo9.ExemploContratos.Controller
 {
-    class ContractController
+    class ContractController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             Console.Write("Digite o nome do departamento: ");
             string deptName = Console.ReadLine();

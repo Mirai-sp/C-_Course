@@ -1,12 +1,13 @@
 ﻿using System;
 using Primeiro.Capitulo10.ExemploHeranca.Entities;
 using Primeiro.Helpers;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo10.ExemploHeranca.Controller
 {
-    class ExemploHerancaController
+    class ExemploHerancaController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             // AULA sore herança
             bool rodar = false;

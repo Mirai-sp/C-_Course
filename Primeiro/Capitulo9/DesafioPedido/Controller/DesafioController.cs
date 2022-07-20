@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Globalization;
 using Primeiro.Helpers;
 using Primeiro.Capitulo9.DesafioPedido.Entities;
 using Primeiro.Capitulo9.DesafioPedido.Enums;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo9.DesafioPedido.Controller
 {
-    class DesafioController
+    class DesafioController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             
             Console.WriteLine("Entre com os dados do cliente");

@@ -1,12 +1,13 @@
 ﻿using System;
 using Primeiro.Capitulo9.ExemploEnums.Entities;
 using Primeiro.Capitulo9.ExemploEnums.Enums;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo9.ExemploEnums.Controller
 {
-    class OrderController
+    class OrderController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             Order order = new Order
             {

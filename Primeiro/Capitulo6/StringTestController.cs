@@ -1,10 +1,11 @@
 ﻿using System;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo6
 {
-    class StringTest
+    class StringTestController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             string original = "abcde FGHIJ ABC abc DEFG ";
             string s1 = original.ToUpper();

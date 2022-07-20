@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Globalization;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo6
 {
-    class DateTimeAndTimeSpan
+    class DateTimeAndTimeSpanController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             // construtores
             {

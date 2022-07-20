@@ -3,13 +3,14 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
 using Primeiro.Capitulo10.DesafioClasseAbstrata.Entities;
+using Primeiro.Entities;
 using Primeiro.Helpers;
 
 namespace Primeiro.Capitulo10.DesafioClasseAbstrata.Controller
 {
-    class DesafioClasseAbstrataController
+    class DesafioClasseAbstrataController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             int numEmployee = int.Parse(FunctionsHelper.getFromConsole("Enter the number of tax payers: "));
             List<Contribuinte> contribuintes = new List<Contribuinte>();

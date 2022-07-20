@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+using Primeiro.Entities;
+using Primeiro.Helpers;
 using Primeiro.Capitulo2;
 using Primeiro.Capitulo3;
 using Primeiro.Capitulo5;
@@ -19,95 +23,57 @@ namespace Primeiro
     {
         static void Main(string[] args)
         {
-            void EfetuarEscolha(ref int runOpt, Action functionRun)
-            {
-                functionRun();
-                runOpt = -1;
-                Console.WriteLine();
-            }
-
+            List<LoaderAction> listAction = new List<LoaderAction>();
+            listAction.Add(new LoaderAction("Exemplo Capitulo 1 - Teste para conhecimento", typeof(ExemploController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 3 - Triangulo", typeof(TrianguloController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 5 - Conta Bancária", typeof(ContaBancariaController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 6 - Manipulação de strings", typeof(StringTestController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 6 - DateTime e TimeSpan", typeof(DateTimeAndTimeSpanController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 9 - Exemplo de Enums", typeof(OrderController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 9 - Exemplo de Contratos", typeof(ContractController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 9 - Exemplo de Posts", typeof(StringBuilderController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 9 - Desafio Ordem de pedido", typeof(DesafioController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Exemplo de herança", typeof(ExemploHerancaController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Exemplo de polimorfismo", typeof(ExemploPolimorfismoController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de polimorfismo", typeof(DesafioPolimorfismoController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de classe abstrata", typeof(DesafioClasseAbstrataController).ToString()));
+            listAction.Add(new LoaderAction("Encerrar", null));            
 
             int runOpt = -1;
-            const int maxOpt = 13;
-            const int endOpt = maxOpt + 1;
-            Console.WriteLine("O que deseja rodar:");
-            while (runOpt == -1)
-            {
-                Console.WriteLine("1. Exemplo Capitulo 1 - Teste para conhecimento");
-                Console.WriteLine("2. Exemplo Capitulo 3 - Triangulo");
-                Console.WriteLine("3. Exemplo Capitulo 5 - Conta Bancária");
-                Console.WriteLine("4. Exemplo Capitulo 6 - Manipulação de strings");
-                Console.WriteLine("5. Exemplo Capitulo 6 - DateTime e TimeSpan");
-                Console.WriteLine("6. Exemplo Capitulo 9 - Exemplo de Enums");
-                Console.WriteLine("7. Exemplo Capitulo 9 - Exemplo de Contratos");
-                Console.WriteLine("8. Exemplo Capitulo 9 - Exemplo de Posts");
-                Console.WriteLine("9. Exemplo Capitulo 9 - Desafio Ordem de pedido");
-                Console.WriteLine("10. Exemplo Capitulo 10 - Exemplo de herança");
-                Console.WriteLine("11. Exemplo Capitulo 10 - Exemplo de polimorfismo");
-                Console.WriteLine("12. Exemplo Capitulo 10 - Desafio de polimorfismo");
-                Console.WriteLine("13. Exemplo Capitulo 10 - Desafio de classe abstrata");
-                Console.WriteLine(endOpt + ". Encerrar");
-                Console.Write("Digite a opção desejada: ");
 
+            do
+            {
                 try
                 {
-                    runOpt = int.Parse(Console.ReadLine());
-                    if (!(runOpt >= 1 && runOpt <= maxOpt + 1))
-                        throw new Exception("Escolha um numero válido");
-
-                    switch (runOpt)
+                    Console.WriteLine("O que deseja rodar:");
+                    for (int i = 0; i < listAction.Count; i++)
                     {
-                        case 1:
-                            EfetuarEscolha(ref runOpt, Exemplo.Rodar);
-                            break;
-                        case 2:
-                            EfetuarEscolha(ref runOpt, TrianguloController.Rodar);
-                            break;
-                        case 3:
-                            EfetuarEscolha(ref runOpt, ContaBancariaController.Rodar);
-                            break;
-                        case 4:
-                            EfetuarEscolha(ref runOpt, StringTest.Rodar);
-                            break;
-                        case 5:
-                            EfetuarEscolha(ref runOpt, DateTimeAndTimeSpan.Rodar);
-                            break;
-                        case 6:
-                            EfetuarEscolha(ref runOpt, OrderController.Rodar);
-                            break;
-                        case 7:
-                            EfetuarEscolha(ref runOpt, ContractController.Rodar);
-                            break;
-                        case 8:
-                            EfetuarEscolha(ref runOpt, StringBuilderController.Rodar);
-                            break;
-                        case 9:
-                            EfetuarEscolha(ref runOpt, DesafioController.Rodar);
-                            break;
-                        case 10:
-                            EfetuarEscolha(ref runOpt, ExemploHerancaController.Rodar);
-                            break;
-                        case 11:
-                            EfetuarEscolha(ref runOpt, ExemploPolimorfismoController.Rodar);
-                            break;
-                        case 12:
-                            EfetuarEscolha(ref runOpt, DesafioPolimorfismoController.Rodar);
-                            break;
-                        case 13:
-                            EfetuarEscolha(ref runOpt, DesafioClasseAbstrataController.Rodar);
-                            break;
-                        case endOpt:
-                            Console.WriteLine();
-                            Console.WriteLine("Hell Yeahh, good bye!!");
-                            break;
+                        Console.WriteLine((i+1) + "." + listAction[i].Title);
+                    }
+
+                    runOpt = int.Parse(FunctionsHelper.getFromConsole("Digite uma opção: "));
+                    if (runOpt > listAction.Count) // considerar o caso encerrar
+                        throw new Exception("Escolha uma opção válida");
+                    else if (runOpt <= listAction.Count && listAction[runOpt - 1].Controller == null)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Hell Yeahh, good bye!!");
+                    }
+                    else
+                    {                        
+                        LoadController controller = (LoadController)listAction[runOpt-1].CreateInstance();
+                        controller.Rodar();
+                        runOpt = -1;
+                        Console.WriteLine("");
                     }
                 }
-                catch (Exception e)
+                catch
                 {
+                    Console.WriteLine($"Digite uma opção válida, escolha entre 1 e { 0}", listAction.Count + 1);
+                    Console.WriteLine("");
                     runOpt = -1;
-                    Console.WriteLine("Digite uma opção válida, escolha entre 1 e {0}", maxOpt);
                 }
-            }
+            } while (runOpt == -1);
         }
     }
 }

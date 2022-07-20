@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Globalization;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo5
 {
-    class ContaBancariaController
+    class ContaBancariaController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             bool rodar = true;
             while (rodar)

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Globalization;
 using Primeiro.Capitulo10.ExemploPolimorfismo.Entities;
+using Primeiro.Entities;
 
 namespace Primeiro.Capitulo10.ExemploPolimorfismo.Controller
 {
-    class ExemploPolimorfismoController
+    class ExemploPolimorfismoController : LoadController
     {
-        public static void Rodar()
+        public override void Rodar()
         {
             List<Employee> list = new List<Employee>();
 
