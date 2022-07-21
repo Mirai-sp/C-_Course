@@ -16,6 +16,7 @@ using Primeiro.Capitulo10.ExemploHeranca.Controller;
 using Primeiro.Capitulo10.ExemploPolimorfismo.Controller;
 using Primeiro.Capitulo10.DesafioPolimorfismo.Controller;
 using Primeiro.Capitulo10.DesafioClasseAbstrata.Controller;
+using Primeiro.Capitulo11.ExemploCustomExceptions.Controller;
 
 
 namespace Primeiro
@@ -40,6 +41,7 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Exemplo de polimorfismo", typeof(ExemploPolimorfismoController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de polimorfismo", typeof(DesafioPolimorfismoController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de classe abstrata", typeof(DesafioClasseAbstrataController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Exemplo de custom exception", typeof(ExemploCustomExceptionsController).ToString()));
             listAction.Add(new LoaderAction("Limpar Console", "-1"));
             listAction.Add(new LoaderAction("Encerrar", null));
 
