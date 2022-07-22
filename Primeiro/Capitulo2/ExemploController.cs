@@ -2,7 +2,7 @@
 using System.Globalization;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo2
+namespace Primeiro.LoaderController
 {
     class ExemploController : LoadController
     {

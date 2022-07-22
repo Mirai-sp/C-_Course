@@ -2,7 +2,7 @@
 using System.Globalization;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo3
+namespace Primeiro.LoaderController
 {
     class TrianguloController : LoadController
     {

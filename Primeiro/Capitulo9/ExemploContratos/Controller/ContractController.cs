@@ -5,7 +5,7 @@ using System.Globalization;
 using Primeiro.Entities;
 
 
-namespace Primeiro.Capitulo9.ExemploContratos.Controller
+namespace Primeiro.LoaderController
 {
     class ContractController : LoadController
     {

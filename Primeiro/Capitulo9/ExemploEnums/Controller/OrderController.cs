@@ -3,7 +3,7 @@ using Primeiro.Capitulo9.ExemploEnums.Entities;
 using Primeiro.Capitulo9.ExemploEnums.Enums;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo9.ExemploEnums.Controller
+namespace Primeiro.LoaderController
 {
     class OrderController : LoadController
     {

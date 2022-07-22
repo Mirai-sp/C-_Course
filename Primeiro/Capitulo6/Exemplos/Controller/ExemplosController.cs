@@ -5,7 +5,7 @@ using Primeiro.Entities;
 using Primeiro.Capitulo6.Exemplos.Structs;
 using Primeiro.Helpers;
 
-namespace Primeiro.Capitulo6.Exemplos.Controller
+namespace Primeiro.LoaderController
 {
     class ExemplosController : LoadController
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Primeiro.Capitulo3
+namespace Primeiro.LoaderController
 {
 
     public class Triangulo

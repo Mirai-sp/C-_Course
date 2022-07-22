@@ -6,7 +6,7 @@ using Primeiro.Capitulo10.DesafioClasseAbstrata.Entities;
 using Primeiro.Entities;
 using Primeiro.Helpers;
 
-namespace Primeiro.Capitulo10.DesafioClasseAbstrata.Controller
+namespace Primeiro.LoaderController
 {
     class DesafioClasseAbstrataController : LoadController
     {

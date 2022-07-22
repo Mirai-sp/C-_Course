@@ -3,7 +3,7 @@ using Primeiro.Capitulo10.ExemploHeranca.Entities;
 using Primeiro.Helpers;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo10.ExemploHeranca.Controller
+namespace Primeiro.LoaderController
 {
     class ExemploHerancaController : LoadController
     {

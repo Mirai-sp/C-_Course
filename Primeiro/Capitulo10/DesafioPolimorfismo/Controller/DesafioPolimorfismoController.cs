@@ -6,7 +6,7 @@ using Primeiro.Helpers;
 using Primeiro.Capitulo10.DesafioPolimorfismo.Entities;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo10.DesafioPolimorfismo.Controller
+namespace Primeiro.LoaderController
 {
     class DesafioPolimorfismoController : LoadController
     {

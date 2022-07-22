@@ -2,22 +2,7 @@
 using System.Collections.Generic;
 using Primeiro.Entities;
 using Primeiro.Helpers;
-using Primeiro.Capitulo2;
-using Primeiro.Capitulo3;
-using Primeiro.Capitulo5;
-using Primeiro.Capitulo6.Exemplos.Controller;
-using Primeiro.Capitulo6.DesafioLista.Controller;
-using Primeiro.Capitulo7;
-using Primeiro.Capitulo9.ExemploEnums.Controller;
-using Primeiro.Capitulo9.ExemploContratos.Controller;
-using Primeiro.Capitulo9.ExemploStringBuilder.Controller;
-using Primeiro.Capitulo9.DesafioPedido.Controller;
-using Primeiro.Capitulo10.ExemploHeranca.Controller;
-using Primeiro.Capitulo10.ExemploPolimorfismo.Controller;
-using Primeiro.Capitulo10.DesafioPolimorfismo.Controller;
-using Primeiro.Capitulo10.DesafioClasseAbstrata.Controller;
-using Primeiro.Capitulo11.ExemploCustomExceptions.Controller;
-
+using Primeiro.LoaderController;
 
 namespace Primeiro
 {
@@ -42,6 +27,9 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de polimorfismo", typeof(DesafioPolimorfismoController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de classe abstrata", typeof(DesafioClasseAbstrataController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Exemplo de custom exception", typeof(ExemploCustomExceptionsController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Exemplo de Locadora sem Interface", typeof(ExemploLocadoraSemInterfaceController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Exemplo de Locadora com Interface", typeof(ExemploLocadoraComInterfaceController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Desafio de contrato", typeof(DesafioInterfaceController).ToString()));            
             listAction.Add(new LoaderAction("Limpar Console", "-1"));
             listAction.Add(new LoaderAction("Encerrar", null));
 

@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Capitulo14\ExemploLocadora\SemInterface\" />
     <Folder Include="Capitulo9\ExemploStringBuilder\Enums\" />
   </ItemGroup>
 

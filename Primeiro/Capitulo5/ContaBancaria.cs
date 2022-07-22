@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Primeiro.Capitulo5
+namespace Primeiro.LoaderController
 {
     class ContaBancaria
     {

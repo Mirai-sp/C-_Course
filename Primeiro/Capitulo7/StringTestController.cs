@@ -1,7 +1,7 @@
 ﻿using System;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo7
+namespace Primeiro.LoaderController
 {
     class StringTestController : LoadController
     {

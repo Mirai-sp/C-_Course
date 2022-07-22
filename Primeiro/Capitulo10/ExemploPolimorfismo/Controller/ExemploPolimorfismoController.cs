@@ -4,7 +4,7 @@ using System.Globalization;
 using Primeiro.Capitulo10.ExemploPolimorfismo.Entities;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo10.ExemploPolimorfismo.Controller
+namespace Primeiro.LoaderController
 {
     class ExemploPolimorfismoController : LoadController
     {

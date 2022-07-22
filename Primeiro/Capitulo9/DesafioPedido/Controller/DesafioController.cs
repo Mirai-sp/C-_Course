@@ -5,7 +5,7 @@ using Primeiro.Capitulo9.DesafioPedido.Entities;
 using Primeiro.Capitulo9.DesafioPedido.Enums;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo9.DesafioPedido.Controller
+namespace Primeiro.LoaderController
 {
     class DesafioController : LoadController
     {

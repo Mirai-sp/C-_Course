@@ -2,7 +2,7 @@
 using System.Globalization;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo5
+namespace Primeiro.LoaderController
 {
     class ContaBancariaController : LoadController
     {

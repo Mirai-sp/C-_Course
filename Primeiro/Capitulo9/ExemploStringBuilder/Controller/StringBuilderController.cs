@@ -2,7 +2,7 @@
 using Primeiro.Capitulo9.ExemploStringBuilder.Entities;
 using Primeiro.Entities;
 
-namespace Primeiro.Capitulo9.ExemploStringBuilder.Controller
+namespace Primeiro.LoaderController
 {
     class StringBuilderController : LoadController
     {

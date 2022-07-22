@@ -5,7 +5,7 @@ using Primeiro.Entities;
 using Primeiro.Capitulo11.ExemploCustomExceptions.Entities;
 using Primeiro.Capitulo11.ExemploCustomExceptions.Exceptions;
 
-namespace Primeiro.Capitulo11.ExemploCustomExceptions.Controller
+namespace Primeiro.LoaderController
 {
     class ExemploCustomExceptionsController : LoadController
     {
