@@ -35,7 +35,10 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo Generics ( Reuso )", typeof(ExemploGenericsController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo Limitacao de Generics ( Reuso )", typeof(ExemploRestricaoGenericController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo Equals e Hashcode", typeof(ExemploEqualsEHashCodeController).ToString()));
-            
+            listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo de HashSet e SortedSet", typeof(ExemploHashSetSortedSetController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Desafio de Hashset", typeof(DesafioHashSetController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo de Dictionary e SortedDictionary", typeof(ExemploDictionaryController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Desafio de Dictionary e SortedDictionary", typeof(DesafioDictionaryController).ToString()));            
 
 
             listAction.Add(new LoaderAction("Limpar Console", "-1"));
