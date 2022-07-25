@@ -2,7 +2,7 @@
 using Primeiro.Entities;
 using System.IO;
 
-namespace Primeiro.Capitulo13.ExemploFileStream.Controller
+namespace Primeiro.LoaderController
 {
     class ExemploFileStreamController : LoadController
     {

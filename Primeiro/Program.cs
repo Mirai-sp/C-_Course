@@ -27,9 +27,17 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de polimorfismo", typeof(DesafioPolimorfismoController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 10 - Desafio de classe abstrata", typeof(DesafioClasseAbstrataController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Exemplo de custom exception", typeof(ExemploCustomExceptionsController).ToString()));
-            listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Exemplo de Locadora sem Interface", typeof(ExemploLocadoraSemInterfaceController).ToString()));
-            listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Exemplo de Locadora com Interface", typeof(ExemploLocadoraComInterfaceController).ToString()));
-            listAction.Add(new LoaderAction("Exemplo Capitulo 11 - Desafio de contrato", typeof(DesafioInterfaceController).ToString()));            
+            listAction.Add(new LoaderAction("Exemplo Capitulo 13 - Exemplo de Locadora sem Interface", typeof(ExemploLocadoraSemInterfaceController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 13 - Exemplo de Locadora com Interface", typeof(ExemploLocadoraComInterfaceController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 13 - Desafio de contrato", typeof(DesafioInterfaceController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 13 - Exemplo de FileStream", typeof(ExemploFileStreamController).ToString())); 
+            listAction.Add(new LoaderAction("Exemplo Capitulo 14 - Exemplo Icomparable Ordenação", typeof(ExemploIcomparableController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo Generics ( Reuso )", typeof(ExemploGenericsController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo Limitacao de Generics ( Reuso )", typeof(ExemploRestricaoGenericController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo Equals e Hashcode", typeof(ExemploEqualsEHashCodeController).ToString()));
+            
+
+
             listAction.Add(new LoaderAction("Limpar Console", "-1"));
             listAction.Add(new LoaderAction("Encerrar", null));
 
