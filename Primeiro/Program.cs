@@ -40,7 +40,14 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Exemplo de Dictionary e SortedDictionary", typeof(ExemploDictionaryController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 15 - Desafio de Dictionary e SortedDictionary", typeof(DesafioDictionaryController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 16 - Exemplo de Extension Methods", typeof(ExemploExtensionMethodsController).ToString()));
-            
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Comparison", typeof(ExemploComparisonController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Delegate", typeof(ExemploDelegateController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Delegate Predicate", typeof(ExemploPredicateController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Delegate Action", typeof(ExemploActionController).ToString()));            
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Delegate Func", typeof(ExemploFuncController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo do LINK", typeof(ExemploLinkController).ToString()));            
+
+
 
             listAction.Add(new LoaderAction("Limpar Console", "-1"));
             listAction.Add(new LoaderAction("Encerrar", null));
