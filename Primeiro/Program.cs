@@ -45,8 +45,10 @@ namespace Primeiro
             listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Delegate Predicate", typeof(ExemploPredicateController).ToString()));
             listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Delegate Action", typeof(ExemploActionController).ToString()));            
             listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo Delegate Func", typeof(ExemploFuncController).ToString()));
-            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo do LINK", typeof(ExemploLinkController).ToString()));            
-
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exemplo do LINK", typeof(ExemploLinkController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Exercício LINK", typeof(ExercicioLinqController).ToString()));
+            listAction.Add(new LoaderAction("Exemplo Capitulo 17 - Desafio LINK", typeof(DesafioLinqController).ToString()));
+            
 
 
             listAction.Add(new LoaderAction("Limpar Console", "-1"));
